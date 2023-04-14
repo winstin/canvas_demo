@@ -25,6 +25,7 @@ const groupsObj = {
     },
   },
 };
+
 // 矩形,两个矩形叠加,形成效果
 export const basicsNode = Graph.registerNode("basicsNode", {
   inherit: "rect",
@@ -105,7 +106,7 @@ function attrsObtain(num) {
       fill: "#000000",
       fontSize: 12,
       textWrap: {
-        width: -10, // 宽度减少 10px
+        width: 10, // 宽度减少 10px
         height: "50%", // 高度为参照元素高度的一半
         ellipsis: true, // 文本超出显示范围时，自动添加省略号
         breakWord: true, // 是否截断单词
@@ -167,11 +168,13 @@ function markupObtain(num) {
       tagName: "rect",
       selector: `head${i}`,
       groupSelector: "commonStyle",
+      textContent: "链上会",
     });
     textList.push({
       tagName: "text",
       selector: `text${i}`,
       groupSelector: "commonStyle1",
+      textContent: "链上会",
     });
   }
   const markupList = headList.concat(textList);
