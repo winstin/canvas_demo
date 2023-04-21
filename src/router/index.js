@@ -67,6 +67,34 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/canvasdrag.vue')
   },
+  {
+    path: '/canvaseventPro',
+    name: 'canvaseventPro',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/canvaseventPro.vue')
+  },
+
+
+  {
+    path: '/d3_01',
+    name: 'd3_01',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/d3_demo/d3_01.vue')
+  },
+
+  {
+    path: '/bigList',
+    name: 'bigList',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/bigList.vue')
+  },
+  
   
   
   
