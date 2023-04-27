@@ -1,5 +1,8 @@
 <template>
-  <div id="activeImages">
+  <div
+    id="activeImages"
+    :style="`background-image:url(${apng});background-size: 100% 100%;height: 100vh;`"
+  >
     <!-- <img
       style="width: 100px; height: 100px"
       src="../assets/images/out001.webp"
@@ -44,6 +47,7 @@ export default {
       data: [],
       imagesMap: {},
       loadIndex: 0,
+      apng: require("../assets/images/out001.webp"),
     };
   },
 
@@ -103,17 +107,16 @@ export default {
         const img = new Image();
         img.style.objectFit = "cover";
         img.style.width = "100%";
-        img.style.height = "100%";
+        img.style.height = "100vh";
         img.style.display = "block";
         img.src = require(`../assets/images/out${item}.webp`);
         img.onload = () => {
           this.loadIndex++;
+          // this.loadImage();
           if (this.loadIndex == this.data.length) {
-                          this.loadImage();
-
-            // setInterval(() => {
-            //   this.loadImage();
-            // }, 100);
+            setInterval(() => {
+              this.loadImage();
+            }, 100);
           }
         };
         this.imagesMap[item] = img;
