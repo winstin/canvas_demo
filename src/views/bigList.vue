@@ -164,7 +164,6 @@ export default {
       });
     },
     getStartIndex(scrollTop = 0) {
-
       return binarySearch(this.positions, scrollTop);
     },
     getCurrentOffset() {

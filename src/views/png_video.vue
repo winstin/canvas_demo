@@ -47,7 +47,7 @@ export default {
       data: [],
       imagesMap: {},
       loadIndex: 0,
-      apng: require("../assets/images/out001.webp"),
+      apng: require("../assets/images1/out001.webp"),
     };
   },
 
@@ -67,7 +67,7 @@ export default {
   },
   mounted() {
     let imageName = [];
-    for (let i = 1; i <= 455; i++) {
+    for (let i = 1; i <= 121; i++) {
       let str = i + "";
       if (str.length == 1) {
         str = "00" + i;
@@ -91,7 +91,7 @@ export default {
 
   methods: {
     loadImage() {
-      if (this.currentIndex == 454) {
+      if (this.currentIndex == 121) {
         this.activeIndex = "001";
         this.currentIndex = 0;
       } else {
@@ -109,7 +109,7 @@ export default {
         img.style.width = "100%";
         img.style.height = "100vh";
         img.style.display = "block";
-        img.src = require(`../assets/images/out${item}.webp`);
+        img.src = require(`../assets/images1/out${item}.webp`);
         img.onload = () => {
           this.loadIndex++;
           // this.loadImage();
